@@ -24,9 +24,10 @@ public class ReviewService implements CommandLineRunner {
                 .rating(5.22)
                 .build();
         //code to create plain java object
-        System.out.println(r);
-//        reviewRepository.save(r);//this code executes sql query
-        reviewRepository.deleteById(3L);
+
+        reviewRepository.save(r);//this code executes sql query
+        System.out.println(r.getId());
+//        reviewRepository.deleteById(3L);
 //        List<Review> reviews = reviewRepository.findAll();
 //        for(int i=0;i<reviews.size();i++){
 //            System.out.println(reviews.get(i).getContent());
