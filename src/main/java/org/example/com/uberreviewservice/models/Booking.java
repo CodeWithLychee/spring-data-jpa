@@ -33,4 +33,10 @@ public class Booking extends BaseModel{
     @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
     private Review review;
     //now here we have 1:1 realtionship bw them
+
+    @ManyToOne
+    private Driver driver;
+
+    @ManyToOne
+    private Passenger passenger;
 }
