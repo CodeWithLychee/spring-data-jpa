@@ -19,8 +19,10 @@ public abstract class BaseModel {
     private Long Id;
 
     @CreatedDate
+//    @Temporal(value = TemporalType.DATE)
     public Date createdAt;
 
     @LastModifiedDate
+//    @Temporal(value = TemporalType.DATE)
     public Date updatedAt;
 }
