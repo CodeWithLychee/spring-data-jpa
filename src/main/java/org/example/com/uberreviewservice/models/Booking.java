@@ -30,13 +30,14 @@ public class Booking extends BaseModel{
     private Integer Amount;
 
     //i want to show relationship
-    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.REMOVE},fetch = FetchType.LAZY)
     private Review review;
-    //now here we have 1:1 realtionship bw them
+//    //now here we have 1:1 realtionship bw them
 
     @ManyToOne
     private Driver driver;
 
     @ManyToOne
     private Passenger passenger;
+
 }

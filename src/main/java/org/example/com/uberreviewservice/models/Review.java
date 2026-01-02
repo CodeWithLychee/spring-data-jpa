@@ -26,11 +26,6 @@ public class Review extends BaseModel{
 
     private double rating;
 
-    // kafi saare constuctor baan jaege
-//    public Review(Long id){};
-//    public Review(Long id,String content){};
-//    public Review(Long id,Double Rating){};
-
     @Override
     public String toString(){
         return "review " + this.content + this.rating + this.createdAt ;

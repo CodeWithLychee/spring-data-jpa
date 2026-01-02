@@ -2,6 +2,7 @@ package org.example.com.uberreviewservice.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import lombok.*;
 
@@ -19,10 +20,11 @@ public class Driver extends BaseModel{
     private String name;
 
     @Column(nullable = false,unique = true)
-    private String DrivingLicenceNo;
+    private String drivingLicenceNo;
 
     //one to many relationship 1:n
     //driver has many bookings
-    @OneToMany(mappedBy = "driver")
+//    @OneToMany(mappedBy = "driver", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "driver",fetch = FetchType.LAZY)
     private List<Booking> bookings = new ArrayList<>();
 }
